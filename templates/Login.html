@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="../static/Style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="content">
+            <h1 id="tag">Login Page</h1><br/>
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <div class="notification">
+                        {{ messages[0] }}
+                    </div><br/>
+                {% endif %}
+                {% endwith %}
+            <form id="form" method="post" name="myform" action="{{ url_for('login')}}" >
+                <input name="username" type="text" placeholder="Username" required>
+                <input name="password" type="password" placeholder="Password" required>
+                <button id="login" type="submit">Login</button>
+            </form>
+            <br/><br/>
+            <button class="click"  onclick="window.location='{{ url_for('register')}}';" >Don't have an account? Sign Up</button>
+            <br/><br/>
+        </div>
+    </div>
+
+</body>
+</html>

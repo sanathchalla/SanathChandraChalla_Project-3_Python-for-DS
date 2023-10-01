@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="../static/Style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="content">
+            <h1 id="tag">Please login/Signup to check loan eligibility</h1><br/>
+            <br/>
+            <button class="click"  onclick="window.location='{{ url_for('login')}}';" >Login Now</button><br/><br/>
+            <button class="click"  onclick="window.location='{{ url_for('register')}}';" >Register Now</button>
+            <br/><br/>
+        </div>
+    </div>
+
+</body>
+</html>
